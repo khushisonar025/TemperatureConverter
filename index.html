@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Celcius Converter To Fahrenheit</title>
+<style>
+.container {
+		margin: 20px auto;
+		width: 300px;
+		background-color:rgba(0, 0, 0, 0.1);
+		padding: 20px;
+		border-radius: 5px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+h1 {
+text-align: center;
+margin-bottom: 20px;
+}
+input[type="number"] {
+		width: 100%;
+		padding: 10px;
+		margin-bottom: 10px;
+		box-sizing: border-box;
+		}
+p {
+	text-align: left;
+	margin-top: 20px;
+	font-weight: bold;
+	font-size: 20px;
+}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Temperature Converter</h1>
+<p>
+  <label>Celsius</label>
+  <input id="inputCelsius" type="number" placeholder="Celsius" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">
+</p>
+<p>Fahrenheit: <span id="outputFahrenheit"></span></p>
+ </div>
+<script>
+    function temperatureConverter(valNum) {
+  valNum = parseFloat(valNum);
+  document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
+}
+</script>
+</body>
+</html>
+
